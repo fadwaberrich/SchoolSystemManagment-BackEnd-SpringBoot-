@@ -26,6 +26,7 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -41,6 +42,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>2.0.27</version> <!-- Use the latest version -->
+		</dependency>
 
 
 
@@ -54,8 +60,24 @@
             <version>13.0</version>
             <scope>compile</scope>
         </dependency>
+		<dependency>
+			<groupId>org.xhtmlrenderer</groupId>
+			<artifactId>flying-saucer-core</artifactId>
+			<version>9.1.22</version> <!-- Use the latest version -->
+		</dependency>
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itextpdf</artifactId>
+			<version>5.5.13.2</version> <!-- Use the latest version -->
+		</dependency>
 
     </dependencies>
+	<repositories>
+		<repository>
+			<id>itextpdf</id>
+			<url>https://repo.itextsupport.com/releases</url>
+		</repository>
+	</repositories>
 
 	<build>
 		<plugins>
