@@ -27,11 +27,16 @@ public class TeacherController {
     @PostMapping("/addTeacher")
     private Teacher newTeacher(@RequestBody Teacher newTeacher) {
 
+
         User user =new User();
         user.setRole("Teacher");
+        user.setEmail(newTeacher.getEmail());
+        user.setFirstName(newTeacher.getName());
+        user.setPassword(newTeacher.getName());
         ur.save(user);
 
         return tr.save(newTeacher);
+
     }
 
     @GetMapping("/getTeacher")

@@ -33,6 +33,9 @@ public class StudentController {
 	private Student newStudent(@RequestBody Student newStudent) {
 		User user =new User();
 		user.setRole("student");
+		user.setFirstName(newStudent.getName());
+		user.setEmail(newStudent.getEmail());
+		user.setPassword(newStudent.getName());
 		ur.save(user);
 
 
